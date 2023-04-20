@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a,
+a::after,
+a::before {
+  text-decoration: none;
+  color: var(--color_texto);
+}
+
+:root {
+  --color_fondo: #1d1d1d;
+  --color_texto: #fefefe;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  transition: all 0.3s;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color_fondo);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color_texto);
+  border-radius: 15px;
+}
+
+.idiomas {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+.idiomas img,
+svg,
+a {
+  height: 20px;
+  width: 30px;
+}
+
+.fondo {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: -99;
+  inset: 0;
+  background-image: url(../resources/waves_header.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fondo h1 {
+  position: absolute;
+  font-family: "Poppins";
+  font-size: 7rem;
+  font-style: italic;
+}
+
+.cuerpo {
+  background-color: var(--color_fondo);
+}
+
+.cuerpo_wrapper {
+  max-width: 1500px;
+  width: 100%;
+  margin-top: 100vh;
+  margin-inline: auto;
+}
+
+section {
+  min-height: 800px;
+}
+
+.about_me_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 10rem;
+  text-align: justify;
+}
+
+.wrapper_text_bg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #715df2, #f7770f);
+  background-size: 400% 400%;
+  opacity: 0;
+  transition: all 1s;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  min-height: 15rem;
+}
+
+.about_me h1 {
+  font-family: "Poppins";
+  font-size: 5rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.about_me h3 {
+  font-family: "Poppins";
+}
+
+.about_me img {
+  height: 300px;
+}
+
+.proyectos_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 10rem 1rem;
+}
+
+.proyecto {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-family: "Poppins";
+  width: auto;
+}
+
+.proyecto > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 200px;
+}
+
+.proyecto_imagen {
+  min-width: 498px;
+  min-height: 262px;
+}
+
+.proyecto_imagen img {
+  width: 100%;
+  height: 100%;
+}
+
+.proyecto button {
+  margin-top: 0.5rem;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  transition: all 0.5s;
+  background-image: url(../resources/waves_about_me.svg);
+  background-size: 100%;
+}
+
+.proyecto button:hover {
+  background-size: 110%;
+}
+
+.contact_wrapper {
+  width: 100%;
+  padding: 10rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario {
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+form input {
+  width: 100%;
+  height: 50px;
+  border-radius: 1rem;
+  border: none;
+  padding-left: 2rem;
+}
+
+form textarea {
+  width: 100%;
+  height: 200px;
+  resize: none;
+  padding: 1rem 2rem;
+}
+
+.formulario button {
+  margin-top: 0.5rem;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  transition: all 0.5s;
+  background-image: url(../resources/waves_about_me.svg);
+  background-size: 100%;
+}
+
+.formulario button:hover {
+  background-size: 110%;
+}
+
+.contact h2 {
+  font-family: "Poppins";
+}
+
+.contact_h2_bg {
+  background-image: url(../resources/waves_about_me.svg);
+  background-size: 7%;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper_text_bg {
+    flex-direction: column;
+  }
+
+  .about_me_wrapper {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .proyecto {
+    flex-direction: column;
+  }
+}
